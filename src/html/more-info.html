@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous" ></link>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Rubik:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <title>Contacto</title>
+</head>
+<body>
+  <include src="./partials/header.html" title="contacto"></include>
+
+  <section class="hero-container">
+    <div class="hero-img"></div>
+  </section>
+
+  <section class="container">
+    <h2 class="team__title container-contact__title">Contacto</h2>
+    <p class="container__item team__text">
+      Si necesitas los servicios de las Vengalabers en tu misión de salvar el mundo ¡no dudes en ponerte en contacto con nosotras! Tienes dos opciones: poner una señal luminosa en el edificio más alto de tu ciudad, o rellenar el siguiente formulario de contacto.
+    </p>
+  </section>
+
+
+  
+  
+      <form action="https://formspree.io/f/mrgreeba" method="post" class="form-container">
+  
+        <span class="mandatory">Todos los campos marcados con <mark class="mandatory_star">*</mark> son obligatorios.</span>
+  
+        <label class="label-name label" for="name">Nombre completo <mark class="mandatory_star">*</mark>
+          <input class="input-box" type="text" name="name" id="name" placeholder="Nombre..." required>
+        </label>
+        <div class="section-form-wrapper">
+          <label class="label-mail label" for="email">Email <mark class="mandatory_star">*</mark>
+            <input class="input-box email-box" type="email" name="email" id="email" placeholder="nombre.apellidos@mail.com" required>
+          </label>
+          <label class="label-phone label" for="tlf">Teléfono
+            <input class="input-box" type="tel" name="tlf" id="tlf" placeholder="Ej. 123456789">
+          </label>
+        </div>
+        <label class="label-message label" for="msg">Mensaje <mark class="mandatory_star">*</mark>
+          <textarea class="input-box message-box" name="msg"id="msg" placeholder="¿Qué necesitas?" required></textarea>
+        </label>
+        <input class="input-box submit" type="submit" value="Enviar">
+  
+      </form>
+  
+
+
+  <include src="./partials/footer.html"></include>   
+</body>
+</html>

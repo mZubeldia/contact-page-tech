@@ -1,0 +1,52 @@
+#container {
+  box-sizing: content-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 100px;
+  height: 100vh;
+  background: url("../images/fondo_mobile.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.slogan {
+  width: 320px;
+  height: 75px;
+  background-color: #ffffff;
+  font-family: $font-p;
+  position: absolute;
+  transform: translateY(305px);
+  padding: 0.75rem;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.4rem;
+}
+
+@media all and (min-width: 768px) {
+  #container {
+    height: 100vh;
+    background: url("../images/fondo_tablet.jpg") no-repeat cover;
+    transform: translate(0, -35px);
+    margin-bottom: 0;
+  }
+  .slogan {
+    transform: translate(-178px, 210px);
+    background-color: $color-w;
+    background-color: rgba(252, 197, 197, 0.7);
+    font-style: italic;
+  }
+}
+
+@media all and (min-width: 1000px) {
+  #container {
+    height: 100vh;
+    background: url("../images/fondo_tablet.jpg") no-repeat center;
+    background-size: cover;
+    transform: translate(0, 60px);
+  }
+  .slogan {
+    transform: translate(-400px, 305px);
+  }
+}
