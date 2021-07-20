@@ -1,4 +1,8 @@
-/* Estilos generales */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -110,10 +114,26 @@ section {
 body {
   line-height: 1;
 }
+
+/******* lists **********/
 ol,
 ul {
   list-style: none;
 }
+
+li {
+  list-style-type: none;
+}
+
+/****** links *******/
+a,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
 blockquote,
 q {
   quotes: none;
@@ -129,6 +149,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-* {
-  box-sizing: border-box;
+
+/********* form *********/
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }

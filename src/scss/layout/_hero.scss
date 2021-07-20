@@ -1,52 +1,55 @@
-#container {
-  box-sizing: content-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  margin-bottom: 100px;
+.hero {
   height: 100vh;
-  background: url("../images/fondo_mobile.jpg") no-repeat center;
-  background-size: cover;
-}
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  position: relative;
 
-.slogan {
-  width: 320px;
-  height: 75px;
-  background-color: #ffffff;
-  font-family: $font-p;
-  position: absolute;
-  transform: translateY(305px);
-  padding: 0.75rem;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 1.4rem;
-}
-
-@media all and (min-width: 768px) {
-  #container {
-    height: 100vh;
-    background: url("../images/fondo_tablet.jpg") no-repeat cover;
-    transform: translate(0, -35px);
-    margin-bottom: 0;
+  @media (min-width: 760px) {
+    font-size: $fontSizeDesk;
   }
-  .slogan {
-    transform: translate(-178px, 210px);
-    background-color: $color-w;
-    background-color: rgba(252, 197, 197, 0.7);
-    font-style: italic;
-  }
-}
 
-@media all and (min-width: 1000px) {
-  #container {
-    height: 100vh;
-    background: url("../images/fondo_tablet.jpg") no-repeat center;
+  .hero__image {
+    background: url(../images/cover.jpg);
     background-size: cover;
-    transform: translate(0, 60px);
+    background-image: no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
   }
-  .slogan {
-    transform: translate(-400px, 305px);
+
+  .hero__elements {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: $defaultColorWhite;
+
+    .hero__title {
+      font-family: $fontFamilyTitle;
+      font-size: 42px;
+      text-transform: uppercase;
+      letter-spacing: 0.3rem;
+      font-weight: bold;
+      line-height: 55px;
+      word-spacing: 100vw;
+    }
+  }
+}
+
+@media (min-width: 760px) {
+  .hero .hero__elements .hero__title {
+    font-size: 80px;
+    line-height: 106px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero .hero__elements .hero__title {
+    font-size: 100px;
+    line-height: 132px;
   }
 }
